@@ -16,10 +16,12 @@ public class DataGenerator{
         return formatter.format(newDate);
     }
 
-    public String getCity() {
-        faker = new Faker(new Locale("ru"));
-        return faker.address().cityName();
+   public String getCity() {
+        String[] myCityList = new String[]{"Абакан", "Анадырь", "Архангельск", "Астрахань", "Барнаул", "Владикавказ", "Горно-Алтайск", "Йошкар-Ола", "Казань", "Калининград", "Калуга", "Краснодар", "Магас", "Махачкала", "Нарьян-Мар", "Салехард", "Самара", "Саранск", "Саратов", "Хабаровск", "Ханты-Мансийск", "Южно-Сахалинск", "Великий Новгород", "Владивосток", "Владимир", "Вологда", "Рязань", "Биробиджан", "Чебоксары", "Москва", "Санкт-Петербург", "Ульяновск", "Симферополь", "Ростов-на-Дону"};
+        int city = (int) Math.floor(Math.random() * myCityList.length);
+        return myCityList[city];
     }
+
 
     public String getName() {
         faker = new Faker(new Locale("ru"));
